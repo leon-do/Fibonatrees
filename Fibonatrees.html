@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html style="font-family:monospace ; text-align:center">
+	<br>
+		<head>The Fibina<em>tree</em></head>
+	<br><br>
+	<div style="font-size:10px">
+		<div id = "txt1"; style="float:left ; margin:0 ; width:50%"> column 1 here </div>
+		<div id = "txt2"; style="float:left ; margin:0 ; width:50%"> column 2 here </div>
+
+		<div style="float:left ; margin:0 ; width:50%"> || </div>
+		<div style="float:left ; margin:0 ; width:50%"> || </div>
+		<div style="float:left ; margin:0 ; width:50%"> || </div>
+		<div style="float:left ; margin:0 ; width:50%"> || </div>
+	</div>
+	<hr>
+		<div style="float:left ; margin:0 ; width:50%"> Fibonacci sequence in decimal #. </div>
+		<div style="float:left ; margin:0 ; width:50%"> Fibonacci sequence in binary #. </div>
+
+</html>
+
+
+<script>
+// 0,1,1,2,3,5
+// a,b,c,a,b
+var a = 0
+var b = 1
+var c;
+var decimal_text = "";
+var binary_text = "";
+for (var i = 0; i<15; i++)
+{
+	c = a + b;
+		decimal_text = decimal_text + c + "<br>";
+		binary_text = binary_text + Number(c).toString(2) + "<br>";
+	a = b + c;
+		decimal_text = decimal_text + a + "<br>";
+		binary_text = binary_text + Number(a).toString(2) + "<br>";
+	b = c + a;
+		decimal_text = decimal_text + b + "<br>";
+		binary_text = binary_text + Number(b).toString(2) + "<br>";
+}
+
+document.getElementById("txt1").innerHTML = "0" + "<br>" + "1" + "<br>" + decimal_text;
+document.getElementById("txt2").innerHTML = "0" + "<br>" + "1" + "<br>" + binary_text;
+
+</script>
+
+
+
